@@ -100,8 +100,9 @@
         <h2>Important concepts</h2>
         <ul>
           <li class="fragment"><a href="http://repl.it/HaL">Implicit coercions</a></li>
-          <li class="fragment"><a href="http://repl.it/HaV">Variable scope + hoisting</a></li>
+          <li class="fragment"><a href="http://repl.it/HaV/1">Variable scope + hoisting</a></li>
           <li class="fragment"><a href="http://repl.it/Haf">Closure</a></li>
+          <li class="fragment"><a href="http://repl.it/HjX">The prototype chain</a></li>
         </ul>
       </section>
       <section>
@@ -112,7 +113,73 @@
     <section>
       <section>
         <h2>Manipulating the DOM</h2>
-        <p><a href="http://jsfiddle.net/KqUZ8/">jQuery</a></p>
+        <ul>
+          <li class="fragment">Basic concepts</li>
+          <li class="fragment">jQuery / Zepto</li>
+        </ul>
+      </section>
+      <section>
+        <h2>The Document Object Model</h2>
+        <p>A W3C standard which lets you …
+        <ul>
+          <li class="fragment">discover elements</li>
+          <li class="fragment">change elements</li>
+          <li class="fragment">add and delete elements</li>
+        </ul>
+      </section>
+      <section>
+        <h2>DOM tree</h2>
+        <img width="500" src="gfx/domtree.svg"/>
+      </section>
+      <section>
+        <h2>Getting an element</h2>
+        <pre><code class="javascript" contenteditable>
+var e = document.getElementById('myElement');
+
+var f = document.getElementsByTagName('div')[0];
+
+var g = document.getElementsByClassName('roundedBox')[0];
+        </code></pre>
+      </section>
+      <section>
+        <h2>Walking the DOM</h2>
+        <pre><code class="javascript" contenteditable>
+// Given HTML element `e`…
+
+e.parentNode
+e.childNodes[0]
+
+document.firstChild.firstChild.lastChild
+        </code></pre>
+      </section>
+      <section>
+        <h2>Manipulating</h2>
+        <pre><code class="javascript" contenteditable>
+document.firstChild.firstChild.nodeValue = 'some text';
+document.firstChild.setAttribute('id', 'myBox');
+        </code></pre>
+      </section>
+      <section>
+        <h2>Adding</h2>
+        <pre><code class="javascript" contenteditable>
+var el = document.createElement('hr');
+document.getElementById('myBox').appendChild(el);
+        </code></pre>
+        <p class="fragment">Task: <a href="http://jsfiddle.net/hAjMC/">http://jsfiddle.net/hAjMC/</a></p>
+      </section>
+      <section>
+        <h2>jQuery / Zepto</h2>
+        <p>Why? Cleaner API, smush out browser differences ++</p>
+        <pre><code class="javascript" contenteditable>
+$.get('http://updates.html5rocks.com')
+  .success(function (data) {
+    $('#html5rocks').html(data);
+  })
+  .error(function () {
+    console.error('Could not connect to html5rocks.com');
+  });
+        </code></pre>
+        <p class="fragment"><a href="http://jsfiddle.net/KqUZ8/">More examples</a></p>
       </section>
     </section>
 
