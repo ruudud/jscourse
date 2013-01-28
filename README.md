@@ -22,3 +22,6 @@ Learn to use the hammer.
       ,-'    `-,       /\___________
       |        |       \/~~~~~~~~~~~`
       `--------'
+
+The layout for the example Backbone project is based on
+[Backbone Boilerplate](https://github.com/tbranyen/backbone-boilerplate/).
