@@ -9,18 +9,26 @@
 
   <!-- Application styles. -->
 
-  <link rel="stylesheet" href="/app/styles/index.css">
+  <link rel="stylesheet" href="app/styles/index.css">
 
 </head>
 
 <body>
   <!-- Application container. -->
 
-  <main role="main" id="main"></main>
+  <div id="movieList"></div>
+
+  <!-- Application Dependencies. -->
+  <script src="vendor/jam/jquery/dist/jquery.js"></script>
+  <script src="vendor/jam/underscore/underscore.js"></script>
+  <script src="vendor/jam/backbone/backbone.js"></script>
 
   <!-- Application source. -->
 
-  <script data-main="/app/config" src="/vendor/js/libs/require.js"></script>
+  <script src="app/moviejson.js"></script>
+  <script src="app/movielist.js"></script>
+
+  <script src="app/setup.js"></script>
 
 </body>
 </html>

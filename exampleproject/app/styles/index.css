@@ -1,6 +1,17 @@
-/*-- HTML5 Boilerplate. -----------------------------------------------------*/
-
-@import "../../vendor/h5bp/css/normalize.css";
-@import "../../vendor/h5bp/css/main.css";
-
 /*-- Application stylesheets. -----------------------------------------------*/
+
+h2 {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.listItemTitle {
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.listItem {
+	float: left;
+	margin-left: 20px;
+	max-width: 190px;
+}
